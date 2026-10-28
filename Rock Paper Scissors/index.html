@@ -14,6 +14,11 @@
   onclick="play('Scissors')">Scissors</button>
 
  <script>
+  let score = {
+    wins:0,
+    losses:0,
+    ties:0
+  };
 
   function pickComputerMove(){
     let computerMove = '';
@@ -43,9 +48,16 @@ function play(playerMove){
   } else {
     result = 'lose';
   }
+  if(result == 'win'){
+    score.wins++;
+  }else if (result == 'lose'){
+    score.losses ++;
+  }else{
+    score.ties ++;
+  }
 
-  alert(`you picked: ${playerMove}, computer picked: ${computerMove}, result: ${result}`)
-
+ alert(`you picked: ${playerMove}, computer picked: ${computerMove}, result: ${result}
+wins:${score.wins},losses:${score.losses},Ties${score.ties}`)
 }
  </script>
 </body>
