@@ -12,6 +12,11 @@
   onclick="play('Paper')">Paper</button>
   <button
   onclick="play('Scissors')">Scissors</button>
+  <button onclick="
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    ">Reset Score</button>
 
  <script>
   let score = {
@@ -57,7 +62,7 @@ function play(playerMove){
   }
 
  alert(`you picked: ${playerMove}, computer picked: ${computerMove}, result: ${result}
-wins:${score.wins},losses:${score.losses},Ties${score.ties}`)
+wins:${score.wins},losses:${score.losses},Ties:${score.ties}`)
 }
  </script>
 </body>
