@@ -1,7 +1,7 @@
 const todoList = [];
 function renderTodoList(){
   let todoListHTML = '';
-  for (let i = 0; i <todoList.length; i++ ){
+  for (let i = 0; i < todoList.length; i++ ){
     const todo = todoList[i];
     const html = `
     <p>${todo} 
@@ -10,8 +10,7 @@ function renderTodoList(){
       ">Delete</button> 
     </p>`;
     todoListHTML += html;
-    document.querySelector('.display-todo-list').innerHTML = todoListHTML;
-  }
+  } document.querySelector('.display-todo-list').innerHTML = todoListHTML;
 }
 
 function addTodo(){
@@ -21,3 +20,4 @@ function addTodo(){
   inputEelement.value = '';
   renderTodoList();
 }
+
