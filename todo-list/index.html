@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="app.css">
   <title>todo list</title>
 </head>
   <body>
     <p>Todo list</p>
-    <input placeholder="todo list name" class="input">
-    <button onclick="addTodo()">Add</button>
+    <div class="div-todo-list">
+      <input placeholder="todo list name" class="input">
+      <input type = "date" class="dueDate">
+      <button onclick="addTodo()" class="add-button">Add</button>
+    </div>
     <div class="display-todo-list"></div>
     
     <script src="script.js"></script>
