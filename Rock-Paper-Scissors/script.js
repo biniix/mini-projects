@@ -9,6 +9,19 @@ let score = JSON.parse(localStorage.getItem('score'));
 
 scoreupdate();
 
+document.querySelector('.js-rock-button').
+  addEventListener('click',()=>{
+    play('✊');
+  })
+document.querySelector('.js-paper-button').
+  addEventListener('click',()=>{
+    play('✋');
+  })
+  document.querySelector('.js-scissors-button').
+  addEventListener('click',()=>{
+    play('✌️');
+  })
+
 function pickComputerMove(){
   let computerMove = '';
   const randomNumber = Math.random();
@@ -27,7 +40,7 @@ let intervalId;
 
 function autoPlay(){
   if(!isAutoPlaying){
-    intervalId = setInterval(function(){
+    intervalId = setInterval(() =>{
     const computerMove = pickComputerMove();
     play(computerMove);
   },1000);
