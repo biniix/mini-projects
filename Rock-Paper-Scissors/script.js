@@ -22,6 +22,16 @@ document.querySelector('.js-paper-button').
     play('✌️');
   })
 
+  document.body.addEventListener('keydown',(event) => {
+    if(event.key === 'r'){
+      play('✊');
+    }else if(event.key === 'p'){
+      play('✋')
+    }else if(event.key === 's'){
+      play('✌️')
+    }
+  });
+
 function pickComputerMove(){
   let computerMove = '';
   const randomNumber = Math.random();
