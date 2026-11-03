@@ -1,47 +1,110 @@
-body{
+:root {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --text: #222;
+  --muted: #666;
+  --border: #ccc;
+  --accent: #4caf50;
+  --accent-hover: #43a047;
+  --danger: #e53935;
+  --danger-hover: #c62828;
+  --radius: 6px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 0 16px;
 }
 
-.div-todo-list {
-  display: grid;
-  grid-template-columns: 200px 150px 100px;
-  column-gap: 10px;
-  align-items: center;
-  padding: 7px;
-}
-
+.div-todo-list,
 .display-todo-list {
   display: grid;
   grid-template-columns: 200px 150px 100px;
-  row-gap: 10px;
   padding: 7px;
 }
-.div-todo-list{
+
+.div-todo-list {
+  column-gap: 10px;
+  align-items: center;
   margin-bottom: 10px;
 }
-.input,.add-button, .delete-button{
-  padding: 7px;
+
+.display-todo-list {
+  row-gap: 10px;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.input,
+.add-button,
+.delete-button {
+  padding: 8px 12px;
   font-size: 16px;
+  border-radius: var(--radius);
+  transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
 }
-.add-button{
-  color: white;
-  background-color: #4CAF50;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+
+.input,
+input[type="date"] {
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-family: inherit;
 }
-.delete-button{
-  color: white;
-  background-color: red;
-  border: none;
-  cursor: pointer;
-    border-radius: 5px;
-}
+
 input[type="date"] {
   padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-family: inherit;
   font-size: 14px;
-  color: #333;
+}
+
+.input:focus,
+input[type="date"]:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.25);
+}
+
+.add-button,
+.delete-button {
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.add-button {
+  background-color: var(--accent);
+}
+
+.add-button:hover {
+  background-color: var(--accent-hover);
+}
+
+.delete-button {
+  background-color: var(--danger);
+}
+
+.delete-button:hover {
+  background-color: var(--danger-hover);
+}
+
+.add-button:active,
+.delete-button:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 520px) {
+  .div-todo-list,
+  .display-todo-list {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
 }
