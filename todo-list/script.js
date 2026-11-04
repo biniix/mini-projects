@@ -5,7 +5,7 @@ function renderTodoList() {
   todoList.forEach((todoObject) => {
     const { name, dueDate } = todoObject;
 
-    todoListHTML += `
+    todoListHTML += /*html*/`
       <div>${name}</div>
       <div>${dueDate}</div>
       <button class="delete-button js-delete-todo-button">Delete</button>`;
