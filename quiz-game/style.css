@@ -83,3 +83,77 @@ body{
   border-color: #f0a3a3;
   color: #c62828;
 }
+.progress-bar{
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 20px; 
+}
+.progress{
+  height: 100%;
+  background-color: #e86a33;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+/* RESULT SCREEN */
+
+#result-screen h1{
+  color: #e86a33;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+reuslt-info{
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  background-color: #f8f0e5;
+  padding: 10px;
+}
+
+result-info p{
+  margin-bottom: 10px;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+#reuslt-message{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e86a33;
+}
+button{
+  background-color: #e86a33;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+button:hover{
+  background-color: #d45b28;
+}
+
+/* RESPOSIVE DESIGN */
+@media (max-width: 500px){
+  screen{
+    padding: 1rem;
+  }
+  start-screen h1, #result-screen h1{
+    font-size: 2rem;
+  }
+  .container{
+    padding: 1rem;
+  }
+  #question-text{
+    font-size: 1.2rem;
+  }
+  .answer-btn{
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
