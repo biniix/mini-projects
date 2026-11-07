@@ -1,0 +1,24 @@
+body{
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#roll-btn{
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#roll-btn:hover{
+  background-color: #45a049;
+}
+#result{
+  margin-top: 20px;
+  font-size: 24px;
+  text-align: center;
+}
