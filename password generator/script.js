@@ -4,7 +4,7 @@ const includeUppercase = true;
 const includeNumbers = true;
 const includesSymbols = true;
 
-function generatePassword() {
+function generatePassword(passwordLength, includeLowercase, includeUppercase, includeNumbers, includesSymbols) {
   const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
   const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const numberChars = '0123456789';
@@ -30,8 +30,9 @@ function generatePassword() {
     password += allowedChars[randomIndex];
   }
   return password;
-}
+} 
 
 
 
-generatePassword(lowercaseChars, uppercaseChars, numberChars, symbolChars);
+const password = generatePassword(passwordLength, includeLowercase, includeUppercase, includeNumbers, includesSymbols);
+console.log(password);
