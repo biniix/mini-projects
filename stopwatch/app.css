@@ -39,3 +39,12 @@ body{
 #reset{
   background-color: dodgerblue;
 }
+#start:hover{
+  background-color: rgb(0, 151, 0);
+}
+#stop:hover{
+  background-color: rgb(255, 35, 35);
+}
+#reset:hover{
+  background-color: rgb(68, 160, 252);
+}
